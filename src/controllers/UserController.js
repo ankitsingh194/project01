@@ -21,7 +21,7 @@ const createUser = async(req,res)=>{
 
         })
 
-        res.status(200).send(user)
+        res.status(200).send("User is Sucessfully created")
 
         
     } catch (error) {

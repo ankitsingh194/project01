@@ -20,10 +20,6 @@ const verifytoken = async(req,res,next) =>{
 
           const verify = jwt.verify(token,"sowskge[gpcPAKBBS]G[ELF['lsgk")
 
-          if(!verify?.user?.name){
-            res.status(401).send("token error")
-           return
-          }
           
           next()
             
@@ -33,7 +29,7 @@ const verifytoken = async(req,res,next) =>{
         
     } catch (error) {
         console.log(error)
-        res.status(500).send("Server Error")
+        res.status(500).send("token Error")
         
     }
 }
